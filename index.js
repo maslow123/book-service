@@ -22,7 +22,7 @@ mongoose.connect(
         } else {
             console.log("mongodb is connected");
             
-            const HTTP_PORT = process.env.HTTP_PORT;
+            const HTTP_PORT = process.env.PORT;
 
             if (process.env.NODE_ENV === 'development'){
                 app.listen(HTTP_PORT, () => {
