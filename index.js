@@ -24,11 +24,9 @@ mongoose.connect(
             
             const HTTP_PORT = process.env.PORT;
 
-            if (process.env.NODE_ENV === 'development'){
-                app.listen(HTTP_PORT, () => {
-                    console.log(`Server listening on port ${HTTP_PORT}`);
-                });
-            }
+            app.listen(HTTP_PORT, () => {
+                console.log(`Server listening on port ${HTTP_PORT}`);
+            });
         }
     }
 );
