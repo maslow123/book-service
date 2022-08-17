@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-const conn = 'mongodb+srv://maslow123:TxQQQiurkyrnffGz@cluster0.j0bumgs.mongodb.net/books-db?retryWrites=true&w=majority';
+const conn = process.env.MONGODB_URL_CONNECTION;
 mongoose.connect(
     conn,
     { 
@@ -22,7 +22,7 @@ mongoose.connect(
         } else {
             console.log("mongodb is connected");
             
-            const HTTP_PORT = process.env.PORT;
+            const HTTP_PORT = process.env.HTTP_PORT;
 
             app.listen(HTTP_PORT, () => {
                 console.log(`Server listening on port ${HTTP_PORT}`);

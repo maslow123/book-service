@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const connStr = 'mongodb+srv://maslow123:TxQQQiurkyrnffGz@cluster0.j0bumgs.mongodb.net/books-db?retryWrites=true&w=majority'
+const connStr = process.env.MONGODB_URL_CONNECTION;
 mongoose.connect(
     connStr,
     { 

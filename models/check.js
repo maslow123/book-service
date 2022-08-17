@@ -1,8 +1,8 @@
 const  mongoose = require('mongoose');
 const  Wishlist = require('./wishlist_model.js');
-const connStr = 'mongodb+srv://maslow123:TxQQQiurkyrnffGz@cluster0.j0bumgs.mongodb.net/books-db?retryWrites=true&w=majority'
+const conn = process.env.MONGODB_URL_CONNECTION;
 mongoose.connect(
-    connStr,
+    conn,
     { 
         useNewUrlParser: true, 
         useUnifiedTopology: true 
