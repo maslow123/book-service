@@ -3,7 +3,7 @@
 - [Make](https://community.chocolatey.org/packages/make)
 
 ## How to run the application?
-- Clone this repository repository
+- Clone this repository
 - Open your terminal / cmd, and type the command on below:
     ```
     make runapi
